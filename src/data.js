@@ -54,16 +54,6 @@ export const cta = {
   href: "/kontakt",
 };
 
-/* Traka ispod hera: kratke, proverljive činjenice. */
-export const marquee = [
-  "B kategorija",
-  "Kragujevac",
-  "Dragoslava Srejovića 19",
-  "Teorijska nastava",
-  "Praktična obuka",
-  "Kalden 020",
-];
-
 export const advantages = [
   {
     title: "Teorijska nastava",
@@ -252,7 +242,7 @@ export const routeMeta = {
   "/cenovnik": {
     title: "Cenovnik auto škole u Kragujevcu | Kalden 020",
     description:
-      "Cenovnik obuke za B, A1, A2 i A kategoriju u Kragujevcu. Čas teorije 500 din, čas vožnje 2.000 din, polaganje 6.000 din. Ukupna cena po svakoj situaciji kandidata.",
+      "Cenovnik obuke za B, A1, A2 i A kategoriju u Kragujevcu. Čas teorije 500 din, čas vožnje 2.000 din, teorijski i praktični ispit po 6.000 din. Ukupna cena po svakoj situaciji kandidata.",
     label: "Cenovnik",
   },
   "/kako-do-dozvole": {
@@ -305,11 +295,14 @@ export const legal = {
  * ======================================================================= */
 
 export const pricing = {
-  /* Unit prices confirmed by the school on 15 October 2026. */
+  /* Unit prices confirmed by the school on 15 October 2026. The two exams are
+     separate payments of 6.000 din each, corrected by the school on
+     16 October 2026 (it had been read as one 6.000 din fee for both). */
   units: {
     theory: { label: "Čas teorije", value: 500, unit: "din / čas" },
     driving: { label: "Čas vožnje", value: 2000, unit: "din / čas" },
-    exam: { label: "Polaganje (T + V)", value: 6000, unit: "din, jednokratno" },
+    theoryExam: { label: "Teorijski ispit", value: 6000, unit: "din / ispit" },
+    drivingExam: { label: "Praktični ispit", value: 6000, unit: "din / ispit" },
   },
 
   categories: [
@@ -403,9 +396,21 @@ export const pricing = {
   common: [
     "Lična karta je obavezna pri upisu, tokom obuke i na oba dela ispita.",
     "Za maloletne kandidate potrebna je saglasnost i potpis roditelja ili staratelja na ugovoru.",
-    "Lekarsko uverenje je uslov za početak praktične obuke. Teorijsku nastavu i teorijski ispit kandidat može završiti i pre nego što ga pribavi.",
+    "Lekarski pregled i prva pomoć moraju biti završeni pre prve vožnje. Teorijsku nastavu i teorijski ispit kandidat može završiti i pre toga.",
     "Teorijski ispit traje 45 minuta, a za prolaz je potrebno najmanje 85% ukupnog broja poena.",
     "Praktični ispit obuhvata proveru na poligonu i vožnju u javnom saobraćaju.",
-    "Položen ispit iz prve pomoći potreban je za izdavanje vozačke dozvole.",
   ],
 };
+
+/* One total, used by /cenovnik and by the offers in the structured data, so
+   the page and the schema can never disagree. Both exams are charged on every
+   card, the same as the single fee was before the school split it. */
+export function totalFor(scenario) {
+  const { units } = pricing;
+  return (
+    scenario.theory * units.theory.value +
+    scenario.driving * units.driving.value +
+    units.theoryExam.value +
+    units.drivingExam.value
+  );
+}

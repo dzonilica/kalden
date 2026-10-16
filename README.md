@@ -44,7 +44,8 @@ od 2022. godine. Pogrešan podatak na ovakvoj strani košta poziv, pa ih sajt ne
 tvrdi — tek kad klijent potvrdi, ulaze u `src/data.js`:
 
 - [x] **Cenovnik.** Škola je 15. oktobra 2026. potvrdila cene po času (teorija
-      500, vožnja 2.000, polaganje 6.000 din), pa `/cenovnik` računa ukupan
+      500, vožnja 2.000 din), a 16. oktobra da se teorijski i praktični ispit
+      plaćaju posebno, po 6.000 din. `/cenovnik` računa ukupan
       iznos po kategoriji i po tome šta kandidat već poseduje. Ostaje da se
       potvrdi plaćanje na rate.
 - [ ] **Google ocena.** Stari kod je tvrdio 5,0 iz 75 recenzija (2022). Nije

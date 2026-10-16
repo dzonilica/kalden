@@ -57,6 +57,20 @@ export default function SplitText({
     setLines(rows.map((row) => row.join(" ")));
   }, [lines, reduceMotion]);
 
+  /* Lines measured in the fallback face break in the wrong places once the web
+     font swaps in, and the width does not change, so the observer below never
+     hears about it. Measure again when the fonts land. */
+  useLayoutEffect(() => {
+    if (reduceMotion || !document.fonts || document.fonts.status === "loaded") return undefined;
+    let cancelled = false;
+    document.fonts.ready.then(() => {
+      if (!cancelled) setLines(null);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [reduceMotion]);
+
   useLayoutEffect(() => {
     if (reduceMotion) return undefined;
     const host = hostRef.current;

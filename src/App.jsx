@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import CallButton from "./components/CallButton";
 import Cursor from "./components/Cursor";
 import Loader from "./components/Loader";
 import PageHero from "./components/PageHero";
@@ -128,6 +129,7 @@ export default function App() {
         <Page />
       </main>
       <SiteFooter />
+      <CallButton />
     </div>
   );
 }

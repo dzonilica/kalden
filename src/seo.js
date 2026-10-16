@@ -1,4 +1,4 @@
-import { contact, faqs, pricing, routeMeta, site, steps } from "./data";
+import { contact, faqs, pricing, routeMeta, site, steps, totalFor } from "./data";
 
 /*
  * Structured data and head tags.
@@ -17,15 +17,6 @@ import { contact, faqs, pricing, routeMeta, site, steps } from "./data";
 
 const ORG_ID = `${site.origin}/#organization`;
 const SITE_ID = `${site.origin}/#website`;
-
-function totalFor(scenario) {
-  const { units } = pricing;
-  return (
-    scenario.theory * units.theory.value +
-    scenario.driving * units.driving.value +
-    units.exam.value
-  );
-}
 
 const ALL_TOTALS = pricing.categories.flatMap((category) =>
   category.scenarios.map(totalFor),
