@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="sr-Latn-RS">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f3f7fc" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="apple-mobile-web-app-title" content="Kalden 020" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <title>Auto škola Kragujevac – B kategorija | Kalden 020</title>
+    <meta
+      name="description"
+      content="Auto škola Kalden 020 u Kragujevcu. Teorijska i praktična obuka za B kategoriju. Informacije o upisu, ceni i terminima: 069 2789 623."
+    />
+    <link rel="canonical" href="https://kalden020.rs/" />
+
+    <meta name="geo.region" content="RS-00" />
+    <meta name="geo.placename" content="Kragujevac" />
+    <meta name="google-site-verification" content="jI1FX2Wx4_Iod-kAzzKxEFrRl5BbU8K-4M1HK5TDScY" />
+
+    <meta property="og:site_name" content="Auto škola Kalden 020" />
+    <meta property="og:locale" content="sr_RS" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Auto škola Kragujevac – B kategorija | Kalden 020"
+    />
+    <meta
+      property="og:description"
+      content="Auto škola Kalden 020 u Kragujevcu. Teorijska i praktična obuka za B kategoriju. Informacije o upisu, ceni i terminima: 069 2789 623."
+    />
+    <meta property="og:url" content="https://kalden020.rs/" />
+    <meta property="og:image" content="https://kalden020.rs/media/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Vozila auto škole Kalden 020 na poligonu"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Auto škola Kragujevac – B kategorija | Kalden 020" />
+    <meta
+      name="twitter:description"
+      content="Auto škola Kalden 020 u Kragujevcu. Teorijska i praktična obuka za B kategoriju. Informacije o upisu, ceni i terminima: 069 2789 623."
+    />
+    <meta name="twitter:image" content="https://kalden020.rs/media/og.jpg" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/logo/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/media/logo/webclip-256.png" />
+
+    <!--
+      The home hero's plate is the largest thing the page paints, and it is
+      discovered only once the bundle has run, so it is preloaded here instead.
+
+      The descriptors are the same set the <picture> offers, so the browser
+      picks one rung and the element then finds it already in cache. AVIF only:
+      the `type` makes anything without AVIF support skip the hint rather than
+      fetch a file it cannot use, and those browsers fall through to the WebP
+      <source> as usual. Kept in step with PLATE_SIZES in HomeHero.jsx.
+
+      index.html is served for every route, so the guard keeps the hint on the
+      one page that actually shows the plate.
+    -->
+    <script>
+      (function () {
+        if (location.pathname.replace(/\/+$/, "") !== "") return;
+
+        var base = "/media/foto/vozni-park-pozadi-zalazak";
+        var link = document.createElement("link");
+        link.rel = "preload";
+        link.as = "image";
+        link.type = "image/avif";
+        link.imageSrcset = [480, 960, 1440, 1800]
+          .map(function (width) {
+            return base + "-" + width + ".avif " + width + "w";
+          })
+          .join(", ");
+        link.imageSizes =
+          "(max-width: 900px) calc(100vw - 40px), (max-width: 1440px) 44vw, 620px";
+        link.fetchPriority = "high";
+        document.head.appendChild(link);
+      })();
+    </script>
+
+    <!--
+      The business block is the same on every page, so it ships here and is
+      never rewritten from JS; src/seo.js adds the per-page WebPage, breadcrumb
+      and FAQ nodes against this same @id.
+
+      Nothing here states a fact the school has not published itself. The price
+      range is the one the school confirmed on 15 October 2026, and it is read
+      off the same totals /cenovnik prints. The Google rating and the social
+      profiles from the 2022 site are still left out until the client confirms
+      them — see README.md.
+    -->
+    <script type="application/ld+json" data-org-schema="true">
+      {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "EducationalOrganization"],
+        "@id": "https://kalden020.rs/#organization",
+        "name": "Auto škola Kalden 020",
+        "alternateName": "Kalden 020",
+        "url": "https://kalden020.rs/",
+        "telephone": "+381692789623",
+        "email": "kalden020kg@gmail.com",
+        "image": "https://kalden020.rs/media/og.jpg",
+        "logo": "https://kalden020.rs/media/logo/kalden020-logo.png",
+        "description": "Auto škola Kalden 020 u Kragujevcu. Teorijska i praktična obuka za B kategoriju.",
+        "foundingDate": "2020-02-24",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Dragoslava Srejovića 19",
+          "postalCode": "34000",
+          "addressLocality": "Kragujevac",
+          "addressCountry": "RS"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 44.010628,
+          "longitude": 20.923517
+        },
+        "hasMap": "https://goo.gl/maps/MHZ5jGw15GcRQFHR8",
+        "areaServed": { "@type": "City", "name": "Kragujevac" },
+        "priceRange": "20.000–106.000 RSD",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Upis i informacije",
+          "telephone": "+381692789623",
+          "email": "kalden020kg@gmail.com",
+          "areaServed": "RS",
+          "availableLanguage": ["Serbian"]
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
