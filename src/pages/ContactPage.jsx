@@ -48,7 +48,7 @@ function Main() {
 
           <Reveal delay={0.1}>
             <p className="lead">
-              Auto škola Kalden 020 nalazi se u ulici Dragoslava Srejovića 19 u Kragujevcu.
+              Auto škola Kalden 020 nalazi se u ulici Milovana Gušića 62 u Kragujevcu.
               Za informacije o upisu pozovite {contact.phone} ili pošaljite upit e-poštom.
             </p>
           </Reveal>

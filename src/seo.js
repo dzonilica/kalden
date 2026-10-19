@@ -47,7 +47,7 @@ function organizationNode() {
       addressLocality: contact.city,
       addressCountry: "RS",
     },
-    geo: { "@type": "GeoCoordinates", latitude: 44.010628, longitude: 20.923517 },
+    geo: { "@type": "GeoCoordinates", latitude: 44.01694, longitude: 20.917743 },
     hasMap: contact.mapsHref,
     areaServed: { "@type": "City", name: contact.city },
     /* Read off the price list rather than written down beside it, so the two

@@ -173,7 +173,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="O nama"
         title="O auto školi Kalden 020"
-        lead="Auto škola Kalden 020 radi u Kragujevcu od 2020. godine. Organizujemo teorijsku i praktičnu obuku za B, AM, A1, A2 i A kategorije. Nalazimo se u ulici Dragoslava Srejovića 19."
+        lead="Auto škola Kalden 020 radi u Kragujevcu od 2020. godine. Organizujemo teorijsku i praktičnu obuku za B, AM, A1, A2 i A kategorije. Nalazimo se u ulici Milovana Gušića 62."
         image="/media/foto/tim-instruktori-uz-vozila-1.jpg"
         alt="Instruktori auto škole Kalden 020 uz otvorena vrata vozila"
         cta={{ label: "Kontakt i upis", href: "/kontakt" }}

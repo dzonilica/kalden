@@ -180,7 +180,7 @@ export default function HomeHero() {
 
           <motion.p className="hero__lead" {...enter(0.76)}>
             Teorijska nastava i praktična obuka za B, AM, A1, A2 i A kategorije. Nalazimo se u
-            ulici Dragoslava Srejovića 19. Za upis, cenu i početak nastave pozovite
+            ulici Milovana Gušića 62. Za upis, cenu i početak nastave pozovite
             069 2789 623.
           </motion.p>
 

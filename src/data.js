@@ -22,14 +22,15 @@ export const contact = {
   phoneE164: "+381692789623",
   email: "kalden020kg@gmail.com",
   emailHref: "mailto:kalden020kg@gmail.com",
-  address: "Dragoslava Srejovića 19",
+  address: "Milovana Gušića 62",
   postalCode: "34000",
   city: "Kragujevac",
   country: "Srbija",
-  addressFull: "Dragoslava Srejovića 19, 34000 Kragujevac",
-  mapsHref: "https://goo.gl/maps/MHZ5jGw15GcRQFHR8",
+  addressFull: "Milovana Gušića 62, 34000 Kragujevac",
+  mapsHref:
+    "https://www.google.com/maps/search/?api=1&query=Milovana%20Gu%C5%A1i%C4%87a%2062%2C%2034000%20Kragujevac",
   mapsEmbed:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2869.52752146584!2d20.921355215731488!3d44.01049233727057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475721b1535612e5%3A0x5c4f8b08134bbff1!2sKalden020!5e0!3m2!1ssr!2srs!4v1650285541669!5m2!1ssr!2srs",
+    "https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sMilovana+Gu%C5%A1i%C4%87a+62,+34000+Kragujevac!6i16!3m1!1ssr!5m1!1ssr",
   /* Dane i sate objaviti tek nakon potvrde škole. */
   hours: [
     ["Radno vreme kancelarije", "Proverite telefonom"],
@@ -182,7 +183,7 @@ export const gallery = [
 export const faqs = [
   {
     q: "Za koje kategorije organizujete obuku?",
-    a: "Auto škola Kalden 020 organizuje teorijsku i praktičnu obuku za B, AM, A1, A2 i A kategorije u Kragujevcu. Nalazimo se u ulici Dragoslava Srejovića 19. Za informacije o upisu pozovite 069 2789 623.",
+    a: "Auto škola Kalden 020 organizuje teorijsku i praktičnu obuku za B, AM, A1, A2 i A kategorije u Kragujevcu. Nalazimo se u ulici Milovana Gušića 62. Za informacije o upisu pozovite 069 2789 623.",
   },
   {
     q: "Koliko traje obuka i koliko časova obuhvata?",
@@ -254,7 +255,7 @@ export const routeMeta = {
   "/kontakt": {
     title: "Kontakt i upis – Kalden 020, Kragujevac",
     description:
-      "Kontakt auto škole Kalden 020: Dragoslava Srejovića 19, Kragujevac. Pozovite 069 2789 623 za informacije o upisu, obuci i ceni.",
+      "Kontakt auto škole Kalden 020: Milovana Gušića 62, Kragujevac. Pozovite 069 2789 623 za informacije o upisu, obuci i ceni.",
     label: "Kontakt",
   },
   "/politika-privatnosti": {
