@@ -24,7 +24,7 @@ import { steps } from "../data";
 export default function StepsRail({
   eyebrow = "Put do dozvole",
   title = "Od upisa do vozačkog ispita",
-  lead = "Pregled postupka za kandidate koji prvi put polažu za B kategoriju. Pogledajte uslove za svaku fazu i korake nakon polaganja.",
+  lead = "Pregled postupka za kandidate koji prvi put polažu za B, AM, A1, A2 ili A kategoriju. Pogledajte uslove za svaku fazu i korake nakon polaganja.",
   link = { href: "/kako-do-dozvole", label: "Uslovi upisa i postupak polaganja" },
 }) {
   const railRef = useRef(null);

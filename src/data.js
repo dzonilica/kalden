@@ -13,7 +13,7 @@ export const site = {
   city: "Kragujevac",
   foundedISO: "2020-02-24",
   founded: "24. februara 2020.",
-  category: "B kategorija",
+  category: "B, AM, A1, A2 i A kategorija",
 };
 
 export const contact = {
@@ -147,7 +147,7 @@ export const trainingBlocks = [
 
 export const facts = [
   { label: "Osnovani", value: "2020." },
-  { label: "Kategorije", value: "B, A1, A2, A" },
+  { label: "Kategorije", value: "B, AM, A1, A2, A" },
   { label: "Vozila za obuku", value: "SEAT Leon" },
   { label: "Grad", value: "Kragujevac" },
 ];
@@ -181,8 +181,8 @@ export const gallery = [
 
 export const faqs = [
   {
-    q: "Za koju kategoriju organizujete obuku?",
-    a: "Auto škola Kalden 020 organizuje teorijsku i praktičnu obuku za B kategoriju u Kragujevcu. Nalazimo se u ulici Dragoslava Srejovića 19. Za informacije o upisu pozovite 069 2789 623.",
+    q: "Za koje kategorije organizujete obuku?",
+    a: "Auto škola Kalden 020 organizuje teorijsku i praktičnu obuku za B, AM, A1, A2 i A kategorije u Kragujevcu. Nalazimo se u ulici Dragoslava Srejovića 19. Za informacije o upisu pozovite 069 2789 623.",
   },
   {
     q: "Koliko traje obuka i koliko časova obuhvata?",
@@ -209,22 +209,22 @@ export const faqs = [
     a: "Za dodatne časove proverite uslove, cenu i raspoložive termine direktno sa školom.",
   },
   {
-    q: "Koliko košta obuka za B kategoriju?",
+    q: "Koliko košta obuka?",
     a: "Za aktuelnu cenu obuke i uslove plaćanja pozovite 069 2789 623 ili pišite na kalden020kg@gmail.com.",
   },
 ];
 
 export const routeMeta = {
   "/": {
-    title: "Auto škola Kragujevac – B kategorija | Kalden 020",
+    title: "Auto škola Kragujevac – B, AM, A1, A2 i A kategorija | Kalden 020",
     description:
-      "Auto škola Kalden 020 u Kragujevcu. Teorijska i praktična obuka za B kategoriju. Informacije o upisu, ceni i terminima: 069 2789 623.",
+      "Auto škola Kalden 020 u Kragujevcu. Teorijska i praktična obuka za B, AM, A1, A2 i A kategorije. Informacije o upisu, ceni i terminima: 069 2789 623.",
     label: "Početna",
   },
   "/o-nama": {
     title: "O auto školi Kalden 020 u Kragujevcu",
     description:
-      "Upoznajte auto školu Kalden 020 u Kragujevcu. Osnovni podaci o školi, obuci za B kategoriju i vozilima za praktičnu nastavu.",
+      "Upoznajte auto školu Kalden 020 u Kragujevcu. Osnovni podaci o školi, obuci za B, AM, A1, A2 i A kategorije i vozilima za praktičnu nastavu.",
     label: "O nama",
   },
   "/obuka": {
@@ -236,19 +236,19 @@ export const routeMeta = {
   "/cenovnik": {
     title: "Cenovnik auto škole u Kragujevcu | Kalden 020",
     description:
-      "Cenovnik obuke za B, A1, A2 i A kategoriju u Kragujevcu. Čas teorije 500 din, čas vožnje 2.000 din, teorijski i praktični ispit po 6.000 din. Ukupna cena po svakoj situaciji kandidata.",
+      "Cenovnik obuke za B, AM, A1, A2 i A kategorije u Kragujevcu. Čas teorije 500 din, čas vožnje 2.000 din, teorijski i praktični ispit po 6.000 din. Ukupna cena po svakoj situaciji kandidata.",
     label: "Cenovnik",
   },
   "/kako-do-dozvole": {
-    title: "Uslovi upisa i polaganje za B kategoriju | Kalden 020",
+    title: "Uslovi upisa i polaganje vozačkog ispita | Kalden 020",
     description:
-      "Pregled postupka za B kategoriju: upis, teorijska nastava, vožnja, ispiti i dokumentacija. Informacije za kandidate auto škole Kalden 020.",
+      "Pregled postupka za B, AM, A1, A2 i A kategorije: upis, teorijska nastava, vožnja, ispiti i dokumentacija. Informacije za kandidate auto škole Kalden 020.",
     label: "Kako do dozvole",
   },
   "/galerija": {
     title: "Vozila i instruktori – Galerija | Kalden 020",
     description:
-      "Pogledajte fotografije vozila, instruktora i poligona auto škole Kalden 020 u Kragujevcu. Saznajte više o praktičnoj obuci za B kategoriju.",
+      "Pogledajte fotografije vozila, instruktora i poligona auto škole Kalden 020 u Kragujevcu. Saznajte više o praktičnoj obuci za B, AM, A1, A2 i A kategorije.",
     label: "Galerija",
   },
   "/kontakt": {
@@ -282,7 +282,7 @@ export const legal = {
  *
  * The hour counts below are the Pravilnik's, article by article:
  *   teorijska obuka  — čl. 6 (fond and the reductions), čl. 8 (full exemption)
- *   praktična obuka  — čl. 32 (A1), čl. 33 (A2), čl. 34 (A), čl. 36 (B)
+ *   praktična obuka  — čl. 31 (AM), čl. 32 (A1), čl. 33 (A2), čl. 34 (A), čl. 36 (B)
  *
  * `theory: 0` means the Pravilnik exempts that candidate from theory entirely
  * (čl. 8) — it is not a missing value, and the page prints it as "nema".
@@ -319,6 +319,22 @@ export const pricing = {
         "Sa AM ili A1: 7č teorije i 35č vožnje. Sa A2 ili A: 7č teorije i 30č vožnje.",
         "Sa B1 kategorijom nema teorijske obuke — ostaje 20 časova vožnje.",
         "Sa F kategorijom: 20č teorije i 20č vožnje. Sa M kategorijom: 25č teorije i pun fond vožnje.",
+      ],
+    },
+    /* AM is listed for a candidate without a licence only: the Pravilnik's
+       30+10 theory fond and 7 hours of driving. Reductions for holders of
+       another category are left to the school to confirm rather than guessed. */
+    {
+      id: "AM",
+      label: "AM",
+      name: "Mopedi",
+      summary:
+        "AM kategorija obuhvata mopede, lake tricikle i lake četvorocikle. Propisani fond vožnje je najmanji među svim kategorijama — 7 časova.",
+      age: "Vozačka dozvola se stiče sa 16 godina, a obuka može početi najranije 12 meseci ranije. Za maloletne kandidate potrebna je saglasnost roditelja ili staratelja.",
+      scenarios: [{ holds: "Bez vozačke dozvole", theory: 40, driving: 7 }],
+      conditions: [
+        "Za kandidata bez vozačke dozvole: 40 časova teorije i 7 časova vožnje.",
+        "Ako već imate neku kategoriju, proverite sa školom koji fond teorije važi za vas.",
       ],
     },
     {

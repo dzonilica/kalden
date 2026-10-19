@@ -15,9 +15,9 @@ import { contact, cta, pricing, totalFor } from "../data";
  * Nothing on this page is a stored price except the four unit rates in
  * src/data.js. Every line and every total is multiplied out from them and the
  * legal hour table at render time, which is the only way a page like this stays
- * true: when the school changes a rate, one number moves and 24 totals follow.
+ * true: when the school changes a rate, one number moves and 25 totals follow.
  *
- * The categories share one grid rather than four, because the question a
+ * The categories share one grid rather than five, because the question a
  * visitor arrives with is never "what does B cost" — it is "what does it cost
  * for me", and the answer turns entirely on what they already hold.
  */

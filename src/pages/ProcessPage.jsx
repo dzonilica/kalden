@@ -17,7 +17,7 @@ const requirements = [
   },
   {
     title: "Praktični ispit",
-    body: "Praktičnom ispitu možete pristupiti sa navršenih 17 godina, nakon završene praktične obuke i ispunjenja ostalih propisanih uslova.",
+    body: "Praktičnom ispitu možete pristupiti sa uzrastom propisanim za kategoriju (za B sa navršenih 17 godina), nakon završene praktične obuke i ispunjenja ostalih propisanih uslova.",
   },
   {
     title: "Izdavanje dozvole",
@@ -92,7 +92,9 @@ function Requirements() {
           />
           <Reveal delay={0.12}>
             <p className="lead">
-              Obuka za B kategoriju može da počne sa navršenih 16 godina. Uslovi i
+              Obuka može da počne najranije 12 meseci pre uzrasta propisanog za kategoriju,
+              za B sa navršenih 16 godina. Uzrast za svaku kategoriju naveden je u
+              cenovniku. Uslovi i
               dokumentacija razlikuju se prema fazi postupka i statusu kandidata.
               Pre upisa proverite u školi šta je potrebno za vaš program obuke.
             </p>
@@ -125,8 +127,8 @@ export default function ProcessPage() {
     <>
       <PageHero
         eyebrow="Kako do dozvole"
-        title="Kako do vozačke dozvole za B kategoriju"
-        lead="Pregled postupka za kandidate koji prvi put polažu za B kategoriju. Ako već imate vozačku dozvolu ili ste započeli obuku u drugoj školi, pre upisa proverite koji program i dokumentacija važe za vas."
+        title="Kako do vozačke dozvole za B, AM, A1, A2 i A kategorije"
+        lead="Pregled postupka za kandidate koji prvi put polažu za B, AM, A1, A2 ili A kategoriju. Ako već imate vozačku dozvolu ili ste započeli obuku u drugoj školi, pre upisa proverite koji program i dokumentacija važe za vas."
         image="/media/foto/vozni-park-3-auta-poligon.jpg"
         alt="Tri vozila auto škole Kalden 020 na poligonu"
         cta={{ label: "Kontakt i upis", href: "/kontakt" }}

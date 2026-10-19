@@ -131,7 +131,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Upis i informacije"
         title="Kontakt i upis u auto školu Kalden 020"
-        lead="Za informacije o obuci za B kategoriju, ceni i terminima nastave pozovite nas ili pošaljite upit e-poštom."
+        lead="Za informacije o obuci za B, AM, A1, A2 i A kategorije, ceni i terminima nastave pozovite nas ili pošaljite upit e-poštom."
         image="/media/foto/seat-leon-crveni.jpg"
         alt="Crveni SEAT Leon auto škole Kalden 020"
         cta={{ label: `Pozovite ${contact.phone}`, href: contact.phoneHref }}

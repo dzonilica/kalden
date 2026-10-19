@@ -38,7 +38,7 @@ function organizationNode() {
     image: `${site.origin}/media/og.jpg`,
     logo: `${site.origin}/media/logo/kalden020-logo.png`,
     description:
-      "Auto škola Kalden 020 u Kragujevcu. Teorijska i praktična obuka za B kategoriju.",
+      "Auto škola Kalden 020 u Kragujevcu. Teorijska i praktična obuka za B, AM, A1, A2 i A kategorije.",
     foundingDate: site.foundedISO,
     address: {
       "@type": "PostalAddress",
@@ -103,9 +103,9 @@ function howToNode(path) {
   return {
     "@type": "HowTo",
     "@id": `${canonicalFor(path)}#howto`,
-    name: "Kako do vozačke dozvole za B kategoriju",
+    name: "Kako do vozačke dozvole za B, AM, A1, A2 i A kategorije",
     description:
-      "Pregled postupka od upisa do izdavanja dozvole za kandidate koji prvi put polažu za B kategoriju u auto školi Kalden 020 u Kragujevcu.",
+      "Pregled postupka od upisa do izdavanja dozvole za kandidate koji prvi put polažu za B, AM, A1, A2 ili A kategoriju u auto školi Kalden 020 u Kragujevcu.",
     step: steps.map((step, index) => ({
       "@type": "HowToStep",
       position: index + 1,

@@ -9,7 +9,6 @@ import {
 } from "motion/react";
 import { ArrowUpRight, SteeringWheel } from "@phosphor-icons/react";
 import Eyebrow from "./Eyebrow";
-import HeroFilm from "./HeroFilm";
 import RollText from "./RollText";
 import SplitText from "./SplitText";
 import { useIntroDone } from "../intro";
@@ -32,10 +31,9 @@ import { cta, pricing } from "../data";
  *     road;
  *   - "020" set huge in outline behind the plate, the school's own number.
  *
- * Over the plate sit two glass cards carrying the two numbers a visitor asks
- * about first: the legal minimum of driving hours for B, and the price of an
- * hour. Both are read from src/data.js, so they follow the price list. The
- * film keeps its place as a chip on the plate's corner.
+ * Over the plate sit two glass cards: the legal minimum of driving hours for
+ * B, read from src/data.js so it follows the price list, and an invitation to
+ * start that leads to the contact page.
  *
  * On a mouse the layers drift against each other with the pointer (the
  * numeral one way, the cards the other), which is what gives the stack its
@@ -59,9 +57,8 @@ const PLATE_SIZES = "(max-width: 900px) calc(100vw - 40px), (max-width: 1440px) 
 const HIDDEN_CLIP = "inset(100% 0% 0% 0%)";
 const SHOWN_CLIP = "inset(-25% -25% -25% -25%)";
 
-/* The minimum fond for a first B licence, and the hourly rate. */
+/* The minimum fond for a first B licence. */
 const B_FOND = pricing.categories.find((category) => category.id === "B").scenarios[0].driving;
-const DRIVING_RATE = pricing.units.driving.value.toLocaleString("sr-RS");
 
 /* Each trail: its height in the frame, its length, how long one pass takes and
    where in that pass it starts, so the set never lines up. */
@@ -182,7 +179,7 @@ export default function HomeHero() {
           />
 
           <motion.p className="hero__lead" {...enter(0.76)}>
-            Teorijska nastava i praktična obuka za B, A1, A2 i A kategoriju. Nalazimo se u
+            Teorijska nastava i praktična obuka za B, AM, A1, A2 i A kategorije. Nalazimo se u
             ulici Dragoslava Srejovića 19. Za upis, cenu i početak nastave pozovite
             069 2789 623.
           </motion.p>
@@ -270,10 +267,6 @@ export default function HomeHero() {
                   </picture>
                 </span>
               </motion.figure>
-
-              <motion.div className="hero__film-slot" {...enter(1.2, { opacity: 0, y: 16 })}>
-                <HeroFilm />
-              </motion.div>
             </motion.div>
 
             <motion.div className="hero__card-slot hero__card-slot--fond" style={depth(cardX, cardY)}>
@@ -291,19 +284,16 @@ export default function HomeHero() {
               </motion.div>
             </motion.div>
 
-            <motion.div className="hero__card-slot hero__card-slot--rate" style={depth(cardX, cardY)}>
+            <motion.div className="hero__card-slot hero__card-slot--start" style={depth(cardX, cardY)}>
               <motion.a
                 className="hero__card hero__card--link"
-                href="/cenovnik"
+                href={cta.href}
                 {...enter(1.28, { opacity: 0, y: 22 })}
               >
-                <span className="hero__card-label">Čas vožnje</span>
-                <span className="hero__card-figure">
-                  {DRIVING_RATE}
-                  <small>din</small>
-                </span>
+                <span className="hero__card-label">Upis je u toku</span>
+                <span className="hero__card-figure hero__card-figure--text">Kreni već sutra</span>
                 <span className="hero__card-more">
-                  Ceo cenovnik
+                  {cta.label}
                   <ArrowUpRight size={14} weight="bold" aria-hidden="true" />
                 </span>
               </motion.a>

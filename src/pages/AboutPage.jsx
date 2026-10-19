@@ -10,7 +10,7 @@ import { advantages, contact, site } from "../data";
 
 const rows = [
   { label: "Početak rada", value: "2020. godina" },
-  { label: "Kategorija", value: "B kategorija" },
+  { label: "Kategorije", value: "B, AM, A1, A2 i A" },
   { label: "Vozila za obuku", value: "SEAT Leon" },
   { label: "Nastava", value: "Teorijska i praktična obuka" },
   { label: "Adresa", value: contact.addressFull },
@@ -28,20 +28,20 @@ function Story() {
             as="h2"
             id="story-title"
             className="display display--sm"
-            text="Obuka za vozače B kategorije"
+            text="Obuka za vozače B, AM, A1, A2 i A kategorije"
           />
           <Reveal delay={0.12}>
             <p className="lead">
               Auto škola Kalden 020 radi u Kragujevcu od {site.founded} godine. Rad škole
               obuhvata teorijsku nastavu, praktičnu obuku i pripremu kandidata za vozački
-              ispit za B kategoriju.
+              ispit za B, AM, A1, A2 i A kategorije.
             </p>
             <p>
               Teorijska nastava obuhvata saobraćajne propise, znakove i prepoznavanje rizika.
               Praktična obuka odvija se sa instruktorom, na poligonu i u saobraćaju.
             </p>
             <p>
-              Program i uslove obuke možete pogledati na stranici „Obuka za B kategoriju“.
+              Program i uslove obuke možete pogledati na stranici „Obuka“.
             </p>
           </Reveal>
         </div>
@@ -173,7 +173,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="O nama"
         title="O auto školi Kalden 020"
-        lead="Auto škola Kalden 020 radi u Kragujevcu od 2020. godine. Organizujemo teorijsku i praktičnu obuku za B kategoriju. Nalazimo se u ulici Dragoslava Srejovića 19."
+        lead="Auto škola Kalden 020 radi u Kragujevcu od 2020. godine. Organizujemo teorijsku i praktičnu obuku za B, AM, A1, A2 i A kategorije. Nalazimo se u ulici Dragoslava Srejovića 19."
         image="/media/foto/tim-instruktori-uz-vozila-1.jpg"
         alt="Instruktori auto škole Kalden 020 uz otvorena vrata vozila"
         cta={{ label: "Kontakt i upis", href: "/kontakt" }}

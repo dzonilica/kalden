@@ -1147,32 +1147,6 @@ picture {
   gap: 16px;
 }
 
-.hero__film-toggle {
-  position: absolute;
-  right: var(--gutter);
-  bottom: 26px;
-  z-index: 3;
-  display: inline-flex;
-  min-height: 38px;
-  padding-inline: 14px;
-  cursor: pointer;
-  align-items: center;
-  gap: 9px;
-  border: 1px solid var(--line-light);
-  background: rgba(7, 25, 47, 0.5);
-  color: var(--white);
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  transition: background-color 280ms ease;
-}
-
-.hero__film-toggle:hover {
-  background: rgba(7, 25, 47, 0.82);
-}
 
 /* ---------- Home hero: the spread ------------------------------------- */
 
@@ -1514,78 +1488,6 @@ picture {
   pointer-events: none;
 }
 
-/* The film chip is positioned against the plate, so its slot covers the plate
-   exactly and lets the pointer through everywhere but the chip itself. */
-.hero__film-slot {
-  position: absolute;
-  z-index: 2;
-  inset: 0;
-  pointer-events: none;
-}
-
-/*
- * The film, as a chip rather than a wallpaper: twelve seconds of the lettering
- * on a car door, at the size it actually reads. It sits on the plate's bottom
- * corner and steps out past it into the gap between the columns.
- */
-.hero-film {
-  position: absolute;
-  bottom: -28px;
-  left: -32px;
-  overflow: hidden;
-  width: clamp(124px, 30%, 188px);
-  aspect-ratio: 16 / 10;
-  border: 1px solid var(--line-light);
-  background: var(--dark-2);
-  box-shadow: 0 28px 62px rgba(3, 10, 20, 0.6);
-  pointer-events: auto;
-}
-
-.hero-film__media {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-film__tag {
-  position: absolute;
-  bottom: 8px;
-  left: 10px;
-  color: var(--white);
-  font-family: var(--font-mono);
-  font-size: 0.56rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  text-shadow: 0 2px 10px rgba(3, 10, 20, 0.85);
-}
-
-.hero-film__toggle {
-  position: absolute;
-  top: 7px;
-  right: 7px;
-  display: inline-flex;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--line-light);
-  background: rgba(7, 25, 47, 0.62);
-  color: var(--white);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  transition:
-    background-color 280ms ease,
-    color 280ms ease;
-}
-
-.hero-film__toggle:hover {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: var(--dark);
-}
-
 /* ----- Glass cards over the plate ----- */
 
 .hero__card-slot {
@@ -1599,7 +1501,7 @@ picture {
   left: clamp(-72px, -4.4vw, -40px);
 }
 
-.hero__card-slot--rate {
+.hero__card-slot--start {
   right: clamp(-44px, -2.6vw, -20px);
   bottom: 17%;
 }
@@ -1646,6 +1548,14 @@ picture {
   font-weight: 560;
   letter-spacing: -0.04em;
   line-height: 1;
+}
+
+/* A phrase set where a number would be, so a step smaller to sit in the same
+   card width. */
+.hero__card-figure--text {
+  font-size: clamp(1.45rem, 1.9vw, 1.85rem);
+  letter-spacing: -0.03em;
+  white-space: nowrap;
 }
 
 .hero__card-figure small {
@@ -3861,23 +3771,15 @@ picture {
       calc(var(--gutter) / 2);
   }
 
-  /* No gutter to step out into at this width, so the chip comes inside, to
-     the top corner, and the two cards share the bottom edge below it. */
-  .hero-film {
-    top: 14px;
-    right: 14px;
-    bottom: auto;
-    left: auto;
-    width: clamp(112px, 30%, 170px);
-  }
-
+  /* No gutter to step out into at this width, so the two cards share the
+     plate's bottom edge. */
   .hero__card-slot--fond {
     top: auto;
     bottom: -30px;
     left: 14px;
   }
 
-  .hero__card-slot--rate {
+  .hero__card-slot--start {
     right: 14px;
     bottom: -30px;
   }
@@ -4074,18 +3976,14 @@ picture {
     justify-content: center;
   }
 
-  .hero__film-toggle {
-    display: none;
-  }
-
   /* Two cards side by side do not fit a phone's plate, so the hours card
-     goes; the price card keeps the corner. Both numbers are on /cenovnik. */
+     goes and the card that leads to the contact page keeps the corner. */
   .hero__card-slot--fond,
   .hero__numeral {
     display: none;
   }
 
-  .hero__card-slot--rate {
+  .hero__card-slot--start {
     right: auto;
     bottom: -26px;
     left: 12px;
@@ -4098,6 +3996,10 @@ picture {
 
   .hero__card-figure {
     font-size: 1.7rem;
+  }
+
+  .hero__card-figure--text {
+    font-size: 1.35rem;
   }
 
   .hero__card-note,
@@ -4309,8 +4211,7 @@ picture {
   }
 
   /* 64svh of a 520px viewport is 333px, which is the plate already; the
-     chip, the cards and the numeral are what have to go. */
-  .hero-film,
+     cards and the numeral are what have to go. */
   .hero__card-slot,
   .hero__numeral {
     display: none;

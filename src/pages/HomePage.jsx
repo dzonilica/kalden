@@ -25,7 +25,7 @@ function Intro() {
             as="h2"
             id="intro-title"
             className="display"
-            text="Obuka za B kategoriju"
+            text="Obuka za B, AM, A1, A2 i A kategorije"
           />
           <Reveal delay={0.12}>
             <p className="lead">

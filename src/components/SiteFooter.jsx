@@ -16,7 +16,7 @@ export default function SiteFooter() {
             <BrandMark variant="dark" />
           </a>
           <p>
-            Auto škola Kalden 020 u Kragujevcu. Teorijska i praktična obuka za B kategoriju.
+            Auto škola Kalden 020 u Kragujevcu. Teorijska i praktična obuka za B, AM, A1, A2 i A kategorije.
           </p>
           <a className="foot__cta" href={cta.href}>
             <span aria-hidden="true">&#8618;</span>

@@ -24,10 +24,10 @@ npx vite preview  # provera build-a
 
 | Ruta | Šta je |
 |---|---|
-| `/` | Početna: hero spread (tipografija levo, foto ploča uz nju, snimak kao čip), traka sa činjenicama, uvod, tri prednosti, šest koraka, šta ulazi u obuku, vozni park, česta pitanja, CTA |
+| `/` | Početna: hero spread (tipografija levo, foto ploča uz nju, kartica „Kreni već sutra“ ka kontaktu), traka sa činjenicama, uvod, tri prednosti, šest koraka, šta ulazi u obuku, vozni park, česta pitanja, CTA |
 | `/o-nama` | Podaci o auto školi, foto traka, teorijska i praktična obuka, dodatni časovi |
 | `/obuka` | Šest delova obuke, vozila, cena na upit |
-| `/cenovnik` | Cene po času i po kategoriji (B, A1, A2, A), sa ukupnim iznosom po situaciji kandidata |
+| `/cenovnik` | Cene po času i po kategoriji (B, AM, A1, A2, A), sa ukupnim iznosom po situaciji kandidata |
 | `/kako-do-dozvole` | Šest koraka u detalje, uslovi, česta pitanja |
 | `/galerija` | Fotografije i video, sa lightboxom (strelice i Escape rade) |
 | `/kontakt` | Kanali, radno vreme, forma, Google mapa |
@@ -56,9 +56,13 @@ tvrdi — tek kad klijent potvrdi, ulaze u `src/data.js`:
 - [ ] **Radno vreme.** Stari dani i sati nisu potvrđeni pa su uklonjeni iz
       prikaza i strukturiranih podataka. Na `/kontakt` i u footeru stoji upućivanje
       na proveru sa školom; vreme kancelarije odvojeno je od termina nastave.
-- [x] **Kategorije.** Pored B, sajt sada pokriva i A1, A2 i A — na `/cenovnik`
-      u celosti, a u heru kao četiri slova koja vode na taj spisak. Meta opisi i
-      dalje govore o B kategoriji, jer je ona i dalje najtraženija.
+- [x] **Kategorije.** Škola radi B, AM, A1, A2 i A, i gde god sajt nabraja
+      kategorije, nabraja svih pet (tekstovi, meta opisi, schema.org). Podaci
+      koji važe samo za B (40 časova vožnje, probna dozvola) i dalje su
+      označeni kao B.
+- [ ] **AM umanjenja.** Za AM je na `/cenovnik` samo kandidat bez dozvole
+      (40 časova teorije, 7 vožnje, po Pravilniku). Umanjenja teorije za
+      kandidate koji već imaju neku kategoriju treba potvrditi sa školom.
 - [ ] **Dokumentacija i organizacija obuke.** Pribaviti stvarni spisak škole po
       fazama i statusu kandidata. Opisi ispita i osnovni zakonski uslovi provereni
       su tokom tekstualne SEO izmene 15. oktobra 2026.
@@ -107,7 +111,7 @@ src/
   pages/               sedam strana
 public/media/
   foto/                fotografije + AVIF/WebP varijante (480, 960, 1440)
-  video/               hero snimak u 720p i 480p (MP4 + WebM) i poster
+  video/               snimak natpisa za galeriju (720p i 480p) i poster
   ikone/               heksagonalne SVG ikone (prednosti, koraci)
   logo/                raster logo, favicon, webclip
   og.jpg               1200×630 kartica za deljenje

@@ -4,8 +4,8 @@ import BrandMark from "./BrandMark";
 import { markIntroDone } from "../intro";
 
 /*
- * Opening loader for the home page. The count follows real readiness — fonts,
- * the hero's first frame, the rest of the document — and the panel then lifts
+ * Opening loader for the home page. The count follows real readiness — fonts
+ * and the rest of the document, the hero's plate among it — and the panel then lifts
  * the same way the page curtain does, so arriving reads as one continuous move.
  */
 
@@ -21,15 +21,6 @@ function whenLoaded() {
   if (document.readyState === "complete") return Promise.resolve();
   return new Promise((resolve) => {
     window.addEventListener("load", resolve, { once: true });
-  });
-}
-
-function whenDecoded(src) {
-  return new Promise((resolve) => {
-    const image = new Image();
-    image.onload = resolve;
-    image.onerror = resolve;
-    image.src = src;
   });
 }
 
@@ -62,7 +53,6 @@ export default function Loader() {
 
     const ready = Promise.all([
       document.fonts?.ready ?? Promise.resolve(),
-      whenDecoded("/media/video/natpis-poster-960.webp"),
       whenLoaded(),
     ]);
     const cap = new Promise((resolve) => {
