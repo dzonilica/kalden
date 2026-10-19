@@ -45,8 +45,8 @@ function Intro() {
 
         <RevealImage
           className="intro__media"
-          src="/media/foto/tim-instruktori-uz-vozila-2.jpg"
-          alt="Instruktori auto škole Kalden 020 pored vozila"
+          src="/media/foto/seat-leon-profil-zalazak.jpg"
+          alt="Beli SEAT Leon auto škole Kalden 020 iz profila u zalazak sunca"
           ratio="4 / 5"
           parallax={108}
           sizes={SIZES.half}
