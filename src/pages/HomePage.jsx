@@ -149,8 +149,8 @@ function TrainingIndex() {
  * Vozni park i tim, as a small gallery.
  *
  * Six photographs on a bento grid and nothing written over them: the cars and
- * the people are the content, so the tiles carry no captions. Each one opens
- * the same lightbox the gallery page uses, where the caption does appear. The
+ * the people are the content, so the tiles carry no captions, and neither does
+ * the lightbox each one opens (the same one the gallery page uses). The
  * cell placement lives in the stylesheet (.fleet__cell:nth-child), so the
  * order here is the order of the set in src/data.js.
  *
@@ -206,7 +206,7 @@ function Fleet() {
               <button
                 type="button"
                 onClick={() => lightbox.open(index)}
-                aria-label={`Otvorite fotografiju: ${item.caption}`}
+                aria-label={`Otvorite fotografiju: ${item.alt}`}
               >
                 <picture>
                   {imageSources(item.src).map((source) => (

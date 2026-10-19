@@ -15,7 +15,7 @@ function Blocks() {
       <div className="shell training__grid">
         <div>
           <Reveal>
-            <Eyebrow>Obuka za B kategoriju</Eyebrow>
+            <Eyebrow>Program obuke</Eyebrow>
           </Reveal>
           <SplitText
             as="h2"
@@ -111,7 +111,7 @@ function Price() {
           as="h2"
           id="price-title"
           className="display display--sm"
-          text="Cena obuke za B kategoriju i načini plaćanja"
+          text="Cena obuke i načini plaćanja"
         />
         <Reveal delay={0.12}>
           <p className="lead">
@@ -140,7 +140,7 @@ export default function TrainingPage() {
     <>
       <PageHero
         eyebrow="Obuka"
-        title="Obuka za B kategoriju u Kragujevcu"
+        title="Obuka za B, AM, A1, A2 i A kategorije u Kragujevcu"
         lead="Obuka u auto školi Kalden 020 obuhvata teorijsku nastavu i praktične časove sa instruktorom. U nastavku su pregled programa, vozila i informacije o ceni."
         image="/media/foto/seat-leon-profil-zalazak.jpg"
         alt="Beli SEAT Leon auto škole Kalden 020 iz profila u zalazak sunca"

@@ -14,6 +14,9 @@ import { gallery } from "../data";
  *
  * The film sits in the set as its own tile rather than above it, because it is
  * one of the seven things there are to look at, not a feature.
+ *
+ * Nothing is written over the frames. The film's tile carries only the play
+ * mark, so it still reads as a film and not a still.
  */
 
 const items = [
@@ -23,7 +26,6 @@ const items = [
     src: "/media/video/natpis-720.mp4",
     poster: "/media/video/natpis-poster.jpg",
     alt: "Natpis Kalden 020 Auto škola na vratima vozila",
-    caption: "Natpis na vozilu",
   },
 ];
 
@@ -59,10 +61,11 @@ export default function Gallery() {
                   decoding="async"
                 />
               </picture>
-              <span className="gallery__label">
-                {item.type === "video" && <Play size={13} weight="fill" aria-hidden="true" />}
-                {item.caption}
-              </span>
+              {item.type === "video" && (
+                <span className="gallery__label" aria-hidden="true">
+                  <Play size={13} weight="fill" />
+                </span>
+              )}
             </button>
           </Reveal>
         ))}

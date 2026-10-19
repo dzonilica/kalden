@@ -156,32 +156,26 @@ export const gallery = [
   {
     src: "/media/foto/vozni-park-3-auta-poligon.jpg",
     alt: "Tri vozila auto škole Kalden 020 na poligonu",
-    caption: "Vozni park na poligonu",
   },
   {
     src: "/media/foto/tim-instruktori-uz-vozila-1.jpg",
     alt: "Instruktori auto škole Kalden 020 uz otvorena vrata vozila",
-    caption: "Instruktori",
   },
   {
     src: "/media/foto/vozni-park-pozadi-zalazak.jpg",
     alt: "Vozila auto škole Kalden 020 snimljena otpozadi u zalazak sunca",
-    caption: "Vozila u zalazak sunca",
   },
   {
     src: "/media/foto/seat-leon-beli-cunjevi.jpg",
     alt: "Beli SEAT Leon auto škole Kalden 020 među čunjevima",
-    caption: "Beli SEAT Leon",
   },
   {
     src: "/media/foto/seat-leon-profil-zalazak.jpg",
     alt: "Beli SEAT Leon auto škole Kalden 020 iz profila u zalazak sunca",
-    caption: "Beli SEAT Leon iz profila",
   },
   {
     src: "/media/foto/seat-leon-crveni.jpg",
     alt: "Crveni SEAT Leon auto škole Kalden 020",
-    caption: "Crveni SEAT Leon",
   },
 ];
 
@@ -234,9 +228,9 @@ export const routeMeta = {
     label: "O nama",
   },
   "/obuka": {
-    title: "Obuka za B kategoriju u Kragujevcu | Kalden 020",
+    title: "Obuka za B, AM, A1, A2 i A kategorije u Kragujevcu | Kalden 020",
     description:
-      "Obuka za B kategoriju u auto školi Kalden 020 u Kragujevcu. Saznajte kako izgleda nastava, koja vozila koristimo i kako da dobijete aktuelni cenovnik.",
+      "Obuka za B, AM, A1, A2 i A kategorije u auto školi Kalden 020 u Kragujevcu. Saznajte kako izgleda nastava, koja vozila koristimo i kako da dobijete aktuelni cenovnik.",
     label: "Obuka",
   },
   "/cenovnik": {

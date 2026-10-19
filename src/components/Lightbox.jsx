@@ -50,7 +50,7 @@ export default function Lightbox({ items, index, onClose, onStep }) {
           className="lightbox"
           role="dialog"
           aria-modal="true"
-          aria-label={current.caption}
+          aria-label={current.alt}
           initial={reduceMotion ? false : { opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -94,7 +94,6 @@ export default function Lightbox({ items, index, onClose, onStep }) {
               </picture>
             )}
             <figcaption>
-              <span>{current.caption}</span>
               <span className="lightbox__count">
                 {String(index + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
               </span>
